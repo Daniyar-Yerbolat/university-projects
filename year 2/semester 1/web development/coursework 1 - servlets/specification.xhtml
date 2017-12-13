@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="generator" content="created by troff2xhtml5 on Thu Sep  1 10:30:12 BST 2016"/>
+<link rel="meta" type="application/rdf+xml" href="rdf.xml" />
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<style type="text/css"> dt {margin-left: 1em} dd {margin-left: 2em} </style>
+<title>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;F28WP Coursework I - Edinburgh Campus</title>
+<script type="text/javascript" src="http://www.macs.hw.ac.uk/~hamish/resize.js"></script>
+</head>
+<body>
+<p class="title">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;F28WP Coursework I - Edinburgh Campus</p>
+<p>
+A product ordering web service should be developed that lets users browse
+through product information and decide which and how many of these products
+they wish to order. It should support the recording of their order in a
+web form along with user and delivery details. On submission order
+information should be delivered to a web server and recorded in a file
+and the order displayed back to users in a confirmation web page. The
+assignment should be done jointly in pairs.
+</p>
+<p>
+Students on the Edinburgh campus who are unable to find a partner may
+contact Hamish Taylor by e-mail (<em>H.Taylor@hw.ac.uk</em>) for assistance
+in finding a partner.
+</p>
+<p>
+The following Web technologies should be used:
+</p>
+<ul class="points">
+<li> HTML 5 (XHTML syntax), CSS 3, DOM 1+ and JavaScript
+</li>
+<li> web server programs in JavaScript or Java
+</li>
+</ul>
+<p>
+All client side programs must be written in JavaScript and server side
+programs written in Java, JavaScript or JSP. The use of JavaScript libraries
+like JScript and web frameworks/templates like AngularJS, Bootstrap,
+React.js, Sails.js etc. is not permitted. However, JSP, Servlets and utility
+modules for Node.js like Express.js are permitted. HTML must be written
+in the XHTML serialisation of HTML 5 and include some elements specific
+to HTML 5. CSS must be supplied in a stylesheet file linked into each web
+page and include some features specific to CSS 3. The final report must
+contain a URL of working web pages for the product ordering system and
+be accessible within Heriot-Watt University. The web pages must continue to
+be available at that URL for 3 weeks after the final submission date.
+</p>
+<p>
+The product ordering service may be hosted on departmental web
+servers like the Apache and Tomcat servers on ports 80 and 8080 of
+<em>anubis.macs.hw.ac.uk</em> that are guaranteed to be running 24/7. Or it
+may be hosted on web servers like Node.js or Jetty that are set up ad hoc
+to run i.e. aren't guaranteed to continue running all the time. However,
+in the latter case it must be feasible for the coursework assessor to
+restart the web server component in order to test the product ordering
+service if it has ceased to run. Clear instructions must be given with
+the submitted coursework on how to run such a web server component and
+suitable access permissions must be set so that the assessor can do so.
+</p>
+<p>
+The listing of the sources for the system should be accompanied by a
+5 page joint report that includes:
+</p>
+<div class="offset">
+<dl>
+<dt>&#9830;</dt>
+<dd>
+A statement of how the task was divided between the pair. 
+          <p/>
+</dd>
+<dt>&#9830;</dt>
+<dd>
+A description of the application, the reasons for any design decisions,
+and the public http URL where the system is deployed (including server
+start up details where needed).
+          <p/>
+</dd>
+<dt>&#9830;</dt>
+<dd>
+A brief statement of what specifically HTML 5 and CSS 3 elements are
+included.
+          <p/>
+</dd>
+<dt>&#9830;</dt>
+<dd>
+A brief discussion of the strengths and weaknesses/deficiencies of the
+system, and what could be done to improve it given more time. 
+          <p/>
+</dd>
+<dt>&#9830;</dt>
+<dd>
+A brief discussion of the testing of the system, stating what was
+done to provide assurance that the various parts of the system worked
+correctly. 
+</dd>
+</dl>
+</div>
+<p>
+Listings of the JavaScript, web server programs, XHTML 5 and CSS 3 should
+include authors' names.
+</p>
+<h3>
+The front end.
+</h3>
+<p>
+The front end should be web pages that detail products of the developers'
+own choice. They should let users enter their contact and delivery details
+and select products in a web form. There should be links available from each
+product's name allowing the user to look at a more detailed description
+of that product including its cost.  Some general information about the
+supplier, delivery and handling etc. should also be provided. Use of a
+good range of different types of form controls is expected.
+</p>
+<p>
+A common CSS stylesheet should be used to give a consistent appearance
+to elements. JavaScript code or form validation attributes should ensure
+that the user enters their name and address and makes coherent product
+choices before being allowed to submit the form. JavaScript should NOT
+use any libraries such as JQuery. JavaScript should interact with web page
+elements and events in a standard DOM 1+ compliant manner.
+</p>
+<p>
+The web pages of the application should validate as correct XHTML 5
+and CSS 3 using the W3C validation services. Validation links should be
+embedded in each web page to make this checking convenient.
+</p>
+<p>
+While students may use cookies or web storage if they choose, their use
+is not required in order to complete this assignment. Any use of cookies
+or web storage should comply with UK law i.e. require consent where needed.
+</p>
+<h3>
+Server Side
+</h3>
+<p>
+Product selections on the web site should be recorded in a file including
+the name, address and email address of the user, the list of products
+ordered, and the total cost of the products. The user should be supplied
+with a confirmation page which lists their order, total cost, name, email
+and delivery address.
+</p>
+<h3>
+Marks
+</h3>
+<p>
+Marks for this assignment are worth up to 25% of the overall course
+mark. Marks will be awarded for XHTML 5, CSS 3, JavaScript, DOM 1+ and
+server side programs in Java or JavaScript. They will take into account
+conformity to the specification and W3C standards and how well and to
+what level it was achieved in the report writing, the programs produced,
+the test cases illustrated and the overall scope of what was essayed. High
+marks (70%+) will only be awarded to those who have successfully attempted
+something reasonably challenging and written it up appropriately.
+</p>
+<h3>
+Date Due
+</h3>
+<p>
+The coursework is due for Edinburgh campus students by Friday
+28th October 2016. It should be submitted digitally through Vision as
+a single PDF file (report + code listing). Separate PDFs for report and
+code can be stitched together using the Linux utility pdftk or the Windows
+utility PDFArchitect from PDFCreator. A separate submission is required
+from each student in a pair even though it is a common joint coursework.
+E-mail or hard copy submissions of the coursework are NOT acceptable. Late
+coursework will be penalised at the standard school rate unless explicit
+permission to submit late is sought and granted before the due submission
+date and time. Permission to submit late will not be given without manifest
+good reasons. This coursework is worth 25% of the overall course mark.
+</p>
+<p>
+Hamish Taylor - <em>H.Taylor@hw.ac.uk</em>
+</p>
+<hr/>
+<div class="leftfoot">&#169; <a href="http://www.macs.hw.ac.uk/~hamish/">Hamish Taylor</a> 2016</div>
+<div class="rightfoot"><a onclick='window.location="http://validator.w3.org/check?uri=" + document.location.href;'>XHTML 5</a></div>
+</body>
+</html>

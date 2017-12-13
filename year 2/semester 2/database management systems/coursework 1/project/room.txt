@@ -1,0 +1,13 @@
+	Olympic Pool	25	11	1
+	Kids Pool	50	13	1
+	Sports and Rec	25	11	1
+	Acrobatics	15	12	1
+	Parkour	20	12	1
+	Sparring	20	11	1
+	Wrestling	25	13	1
+	Weight Loss	55	12	1
+	Lean Mass	40	11	1
+	Conditioning	35	11	1
+	Strength Room	25	12	1
+	Stamina Room	45	13	1
+	Speed Training	30	11	1
