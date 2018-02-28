@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Programming Languages</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/~gabbay/css/syntax.css">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/~gabbay/css/main.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        var _compacted = false;
+                $(".collapsethis").show();
+                $(".uncollapsethis").hide();
+                $(".compact").html("Click for Short View");
+	 
+        $(".compact").click(function(e) {
+            if(!_compacted) {
+                _compacted = true;
+                $(".compact").html("Click for Long View");
+                $(".collapsethis").hide();
+                $(".uncollapsethis").show();
+            }else{
+                _compacted = false;
+                $(".compact").html("Click for Short View");
+                $(".uncollapsethis").hide();
+                $(".collapsethis").show();
+            }
+        });
+    });
+</script>
+
+ 
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,800,800italic,900,900italic|Alegreya+Sans+SC:400,100,100italic,300italic,300,400italic,500,500italic,700,700italic,800,800italic,900,900italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+<link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Rancho' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+
+</head>
+    <body>
+    <div id="sidebar">
+<p><a href="/~gabbay/index.html">Home</a><br />
+<a href="/~gabbay/F28PL/index.html">Course page</a><br />
+<a href="http://www.macs.hw.ac.uk/cs/localinfo/RAY/F28PL">Module descriptor</a><br />
+<a href="/~gabbay/F28PL/exercises.html">Exercises</a><br />
+<a href="../201415-F28PL/index.html">Last year&#8217;s course</a> <br> <a href="#lectures">Lecture videos</a> <br> <a href="#slides">Lecture slides</a> <br> <a href="#tutorials">Tutorials</a> <br> <a href="#labs">Labs</a> <br> <a href="study-classes/class-1.html">Study class 1</a></p>
+<h2 id="links-misc">Misc</h2>
+<p><a href="http://www.timeanddate.com/worldclock/city.html?n=304">The time</a><br />
+<a href="http://www.theweatheroutlook.com/forecast/10day/edinburgh">Edi. weather</a><br />
+<a href="http://www.theweatheroutlook.com/forecast/10day/glasgow">Gla. weather</a><br />
+<a href="http://www.happyzebra.com/timezones-worldclock/sunrisesunset.php?city=Edinburgh">Edi. sun</a><br />
+<a href="http://www.happyzebra.com/timezones-worldclock/sunrisesunset.php?city=Glasgow">Gla. sun</a><br />
+<a href="http://www.windfinder.com/forecast/edinburgh">Edi. wind</a><br />
+<a href="http://www.windfinder.com/forecast/glasgow">Gla. wind</a><br />
+<a href="http://maps.google.com/maps?f=q&amp;hl=en&amp;q=Edinburgh,+EH14+4AS,+UK&amp;ie=UTF8&amp;z=16&amp;ll=55.909302,-3.32051&amp;spn=0.010127,0.033989&amp;t=h&amp;om=1">For martians</a><br />
+<a href="http://industrystandardsoftware.com/online_tools/converters/convert-serp-link-to-direct-location-for-copying-and-pasting.htm">Google link converter</a><br />
+<a href="http://cycleroute.org/">Cycle route</a><br />
+<a href="https://tatoeba.org">Tatoeba</a><br />
+<a href="https://translate.google.com/">Translate</a><br />
+<a href="https://www.linguee.com/">Linguee</a></p>
+</div>
+<div id="main">
+<h1>Programming Languages (<a href="http://www.macs.hw.ac.uk/cs/localinfo/RAY/F28PL">F28PL</a>)</h1>
+<div id="watermark">For historical reference.  <br />
+See <a href="/~gabbay/F28PL/index.html">this year&#8217;s course</a>.</div>
+<p>As a matter of good practice, code must be written in <code>monospace font</code> (also called <code>typewriter font</code>), and be nicely justified and indented.</p>
+<p>All these questions count towards your final exam marks, unless they are explicitly labelled as <em>Unmarked</em>.  You can send answers to labhelpers as you do them; you do not need (and are not expected to have done) all the questions, before having your answers marked.</p>
+<p>Deadlines are as follows:</p>
+<dl>
+	<dt>Questions A and B</dt>
+	<dd>End of Thursday 6 October (passed).</dd>
+	<dt>Questions C and D</dt>
+	<dd>End of Saturday 15 October (passed).</dd>
+	<dt>Questions E and F</dt>
+	<dd>End of Thursday 27 October (passed).</dd>
+	<dt>Questions G, H, and I</dt>
+	<dd>End of Saturday 5 November.</dd>
+	<dt>Question J</dt>
+	<dd>End of Thursday 10 November.</dd>
+	<dt>Questions K and Z</dt>
+	<dd>End of Thursday 24 November.</dd>
+</dl>
+<p>If you have not already done so, you should consult my <a href="index.html#howto">guide to how to answer a programming question</a>, in which the most profound secrets of how to answer a programming question are revealed.</p>
+<h1>Question A (Basic <span class="caps">SML</span>).</h1>
+<p>Write <span class="caps">SML</span> functions to:</p>
+<ol>
+	<li>Multiply real <code>x</code> by integer <code>y</code> to give a real.<br />
+<div class="highlight"><pre><code class="language-ocaml" data-lang="ocaml"><span class="o">-</span> <span class="n">realIntMult</span> <span class="mi">3</span><span class="o">.</span><span class="mi">3</span> <span class="mi">3</span><span class="o">;</span>
+<span class="o">&gt;</span> <span class="mi">9</span><span class="o">.</span><span class="mi">9</span> <span class="o">:</span> <span class="n">real</span></code></pre></div></li>
+	<li>Check if string <code>s1</code> has more letters than string <code>s2</code>.<br />
+<div class="highlight"><pre><code class="language-ocaml" data-lang="ocaml"><span class="o">-</span> <span class="n">moreLetters</span> <span class="s2">&quot;big&quot;</span> <span class="s2">&quot;small&quot;</span><span class="o">;</span>
+<span class="o">&gt;</span> <span class="bp">false</span> <span class="o">:</span> <span class="kt">bool</span></code></pre></div></li>
+	<li>Check if character <code>c</code> represents a digit.  Do not answer this by writing just <code>Char.isDigit</code>.  Also, <strong>do not hard-code</strong> <span class="caps">ASCII</span> numbers such as &#8216;37&#8217; or &#8216;42&#8217;.  This is bad practice, since most readers do not know <span class="caps">ASCII</span> encoding off by heart so it is unclear to the reader what represent.  <br />
+<div class="highlight"><pre><code class="language-ocaml" data-lang="ocaml"><span class="o">-</span> <span class="n">isDigit</span> <span class="o">#</span><span class="s2">&quot;7&quot;</span><span class="o">;</span>
+<span class="o">&gt;</span> <span class="bp">true</span> <span class="o">:</span> <span class="kt">bool</span></code></pre></div></li>
+	<li>If character <code>c</code> represents a digit then return its integer equivalent; otherwise return <code>~1</code>.  Again, your answer should not hard-code <span class="caps">ASCII</span> numbers.<br />
+<div class="highlight"><pre><code class="language-ocaml" data-lang="ocaml"><span class="o">-</span> <span class="n">digitValue</span> <span class="o">#</span><span class="s2">&quot;a&quot;</span><span class="o">;</span>
+<span class="o">&gt;</span> <span class="o">~</span><span class="mi">1</span> <span class="o">:</span> <span class="kt">int</span>
+<span class="o">-</span> <span class="n">digitValue</span> <span class="o">#</span><span class="s2">&quot;7&quot;</span><span class="o">;</span>
+<span class="o">&gt;</span> <span class="mi">7</span> <span class="o">:</span> <span class="kt">int</span></code></pre></div></li>
+	<li>Convert a real <code>r</code> into a tuple of its value and integer equivalent.<br />
+<div class="highlight"><pre><code class="language-ocaml" data-lang="ocaml"><span class="o">-</span> <span class="n">conv</span> <span class="mi">99</span><span class="o">.</span><span class="mi">99</span><span class="o">;</span>
+<span class="o">&gt;</span> <span class="o">(</span><span class="mi">99</span><span class="o">.</span><span class="mi">99</span><span class="o">,</span><span class="mi">99</span><span class="o">)</span> <span class="o">:</span> <span class="n">real</span> <span class="o">*</span> <span class="kt">int</span></code></pre></div></li>
+	<li>Implement the <span class="caps">NAND</span> function from the truth-table below.  <em>Your implementation should not use the ML primitives</em> <code>not</code>, <code>andalso</code>, <em>or</em> <code>orelse</code>.  <em>We are looking for you to write a program that is almost identical to the specification of the problem.</em><br />
+<table border="1"><tr><th>X</th><th>Y</th><th>X NAND Y</th></tr> 
+<tr><td>FALSE</td><td>FALSE</td><td>TRUE</td></tr> 
+<tr><td>FALSE</td><td>TRUE</td><td>TRUE</td></tr> 
+<tr><td>TRUE</td><td>FALSE</td><td>TRUE</td></tr> 
+<tr><td>TRUE</td><td>TRUE</td><td>FALSE</td></tr> 
+</table>
+<div class="highlight"><pre><code class="language-ocaml" data-lang="ocaml"><span class="o">-</span> <span class="nc">NAND</span> <span class="bp">false</span> <span class="bp">true</span><span class="o">;</span>
+<span class="o">&gt;</span> <span class="bp">true</span> <span class="o">:</span> <span class="kt">bool</span></code></pre></div></li>
+</ol>
+<p><br></p>
+<h1>Question B (Recursion, chaining functions).</h1>
+<ol>
+	<li>Find the integer logarithm to the base 2 of an integer n by repeatedly dividing by 2 and counting:<br />
+<div class="highlight"><pre><code class="language-ocaml" data-lang="ocaml"><span class="n">log2</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">log2</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">1</span><span class="o">+</span><span class="n">log2</span> <span class="o">(</span><span class="n">n</span> <span class="n">div</span> <span class="mi">2</span><span class="o">)</span>
+<span class="o">-</span> <span class="n">log2</span> <span class="mi">8</span><span class="o">;</span>
+<span class="o">&gt;</span> <span class="mi">3</span> <span class="o">:</span> <span class="kt">int</span></code></pre></div></li>
+	<li>Find the square root of an integer x by repeatedly decrementing an initial guess s:<br />
+<div class="highlight"><pre><code class="language-ocaml" data-lang="ocaml"><span class="n">sqrt</span> <span class="n">x</span> <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="k">if</span> <span class="n">s</span><span class="o">*</span><span class="n">s</span> <span class="o">&lt;=</span> <span class="n">x</span>
+<span class="n">sqrt</span> <span class="n">x</span> <span class="n">s</span> <span class="o">=</span> <span class="n">sqrt</span> <span class="n">x</span> <span class="o">(</span><span class="n">s</span><span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="k">if</span> <span class="n">s</span><span class="o">*</span><span class="n">s</span> <span class="o">&gt;</span> <span class="n">x</span>
+<span class="o">-</span> <span class="n">sqrt</span> <span class="mi">10</span> <span class="mi">5</span><span class="o">;</span>
+<span class="o">&gt;</span> <span class="mi">3</span> <span class="o">:</span> <span class="kt">int</span></code></pre></div></li>
+	<li>Find the sum of the squares of the first n integers $n^2+(n-1)^2+(n-2)^2+&#8230;1^2$.
+	<ol>
+		<li>The sum of the squares of the first 0 integers is 0.</li>
+		<li>The sum of the squares of the  first n integers is n squared plus the sum of the squares of the first n-1 integers.<br />
+<div class="highlight"><pre><code class="language-ocaml" data-lang="ocaml"><span class="o">-</span> <span class="n">sumSq</span> <span class="mi">3</span><span class="o">;</span>
+<span class="o">&gt;</span> <span class="mi">14</span> <span class="o">:</span> <span class="kt">int</span></code></pre></div></li>
+	</ol></li>
+	<li>Find the sum of the halves of the first n integers $n/2+(n-1)/2&#8230;+1/2$.<br />
+<div class="highlight"><pre><code class="language-ocaml" data-lang="ocaml"><span class="o">-</span> <span class="n">sumHalf</span> <span class="mi">6</span><span class="o">;</span>
+<span class="o">&gt;</span> <span class="mi">9</span> <span class="o">:</span> <span class="kt">int</span></code></pre></div></li>
+	<li>Find the sum of applying function f to the first n integers.
+	<ol>
+		<li>The sum of applying f to the first 0 integers is 0.</li>
+		<li>The sum of applying f to the first n integers is f applied to n plus the sum of applying f to the first n-1 integers.<br />
+<div class="highlight"><pre><code class="language-ocaml" data-lang="ocaml"><span class="o">-</span> <span class="k">fun</span> <span class="n">inc</span> <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="o">;</span>
+<span class="o">&gt;</span> <span class="k">val</span> <span class="n">inc</span> <span class="o">=</span> <span class="n">fn</span> <span class="o">:</span> <span class="kt">int</span> <span class="o">-&gt;</span> <span class="kt">int</span>
+<span class="o">-</span> <span class="n">sumF</span> <span class="n">inc</span> <span class="mi">3</span><span class="o">;</span>
+<span class="o">&gt;</span> <span class="mi">9</span> <span class="o">:</span> <span class="kt">int</span> <span class="n">i</span><span class="o">.</span><span class="n">e</span><span class="o">.</span> <span class="n">inc</span> <span class="mi">3</span><span class="o">+</span><span class="n">inc</span> <span class="mi">2</span><span class="o">+</span> <span class="n">inc</span> <span class="mi">1</span><span class="o">+</span> <span class="mi">0</span></code></pre></div></li>
+	</ol></li>
+	<li>Write <code>sumSq</code> using <code>sumF</code>.</li>
+	<li>Write <code>sumHalf</code> using <code>sumF</code>.</li>
+</ol>
+<p><br></p>
+<h1>Question C (Lists).</h1>
+<ol>
+	<li>Write a function to drop the first n elements of a list l: <br />
+<div class="highlight"><pre><code class="language-ocaml" data-lang="ocaml"><span class="n">drop</span> <span class="n">n</span> <span class="n">l</span> <span class="o">:</span> <span class="kt">int</span> <span class="o">-&gt;</span> <span class="k">&#39;</span><span class="n">a</span> <span class="kt">list</span> <span class="o">-&gt;</span> <span class="k">&#39;</span><span class="n">a</span> <span class="kt">list</span>  
+<span class="n">drop</span> <span class="mi">3</span> <span class="o">[</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">,</span><span class="mi">4</span><span class="o">,</span><span class="mi">5</span><span class="o">]</span> <span class="o">==&gt;</span> <span class="o">[</span><span class="mi">4</span><span class="o">,</span><span class="mi">5</span><span class="o">]</span></code></pre></div>
+	<ul>
+		<li>To drop 0 elements from a list return the list.</li>
+		<li>To drop n elements from the empty list, return the empty list.</li>
+		<li>To drop n elements from a list, drop n-1 elements from the tail.</li>
+	</ul></li>
+	<li>Write a function to take the first n elements of a list l: <br />
+<div class="highlight"><pre><code class="language-ocaml" data-lang="ocaml"><span class="n">take</span> <span class="n">n</span> <span class="n">l</span> <span class="o">:</span> <span class="kt">int</span> <span class="o">-&gt;</span> <span class="k">&#39;</span><span class="n">a</span> <span class="kt">list</span> <span class="o">-&gt;</span> <span class="k">&#39;</span><span class="n">a</span> <span class="kt">list</span> 
+<span class="n">take</span> <span class="mi">3</span> <span class="o">[</span><span class="s2">&quot;a&quot;</span><span class="o">,</span><span class="s2">&quot;b&quot;</span><span class="o">,</span><span class="s2">&quot;c&quot;</span><span class="o">,</span><span class="s2">&quot;d&quot;</span><span class="o">,</span><span class="s2">&quot;e&quot;</span><span class="o">]</span> <span class="o">==&gt;</span> <span class="o">[</span><span class="s2">&quot;a&quot;</span><span class="o">,</span><span class="s2">&quot;b&quot;</span><span class="o">,</span><span class="s2">&quot;c&quot;</span><span class="o">]</span></code></pre></div>
+	<ul>
+		<li>To take 0 elements from a list return the empty list.</li>
+		<li>To take n elements from the empty list, return the empty list.</li>
+		<li>To take elements from a list, put the head of the list onto the result of taking n-1 elements from the tail.</li>
+	</ul></li>
+	<li>Write a function to check if list l1 starts list l2: <br />
+<div class="highlight"><pre><code class="language-ocaml" data-lang="ocaml"><span class="n">starts</span> <span class="n">l1</span> <span class="n">l2</span> <span class="o">:</span> <span class="k">&#39;&#39;</span><span class="n">a</span> <span class="kt">list</span> <span class="o">-&gt;</span> <span class="k">&#39;&#39;</span><span class="n">a</span> <span class="kt">list</span> <span class="o">-&gt;</span> <span class="kt">bool</span>  
+<span class="n">starts</span> <span class="o">[</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">]</span> <span class="o">[</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">,</span><span class="mi">4</span><span class="o">]</span> <span class="o">==&gt;</span> <span class="bp">true</span></code></pre></div>
+	<ul>
+		<li>An empty list starts a list.</li>
+		<li>A list does not start an empty list.</li>
+		<li>A list starts a second  list if they have same head and the tail of the first starts the tail of the second.</li>
+	</ul></li>
+	<li>Write a function to check if list l1 is contained in list l2: <br />
+<div class="highlight"><pre><code class="language-ocaml" data-lang="ocaml"><span class="n">contains</span> <span class="n">l1</span> <span class="n">l2</span> <span class="o">:</span> <span class="k">&#39;&#39;</span><span class="n">a</span> <span class="kt">list</span> <span class="o">-&gt;</span> <span class="k">&#39;&#39;</span><span class="n">a</span> <span class="kt">list</span> <span class="o">-&gt;</span> <span class="kt">bool</span>
+<span class="n">contains</span> <span class="o">[</span><span class="s2">&quot;d&quot;</span><span class="o">,</span><span class="s2">&quot;e&quot;</span><span class="o">,</span><span class="s2">&quot;f&quot;</span><span class="o">]</span> <span class="o">[</span><span class="s2">&quot;a&quot;</span><span class="o">,</span><span class="s2">&quot;b&quot;</span><span class="o">,</span><span class="s2">&quot;c&quot;</span><span class="o">,</span><span class="s2">&quot;d&quot;</span><span class="o">,</span><span class="s2">&quot;e&quot;</span><span class="o">,</span><span class="s2">&quot;f&quot;</span><span class="o">,</span><span class="s2">&quot;g&quot;</span><span class="o">,</span><span class="s2">&quot;h&quot;</span><span class="o">]</span> <span class="o">==&gt;</span> <span class="bp">true</span></code></pre></div>
+	<ul>
+		<li>A list is not contained in an empty list.</li>
+		<li>A list is contained in a second list if it starts the second list.</li>
+		<li>Otherwise, a list is contained in a second list if it is contained in the tail of the second list.</li>
+	</ul></li>
+	<li>Write a function to delete a list from another list: <br />
+<div class="highlight"><pre><code class="language-ocaml" data-lang="ocaml"><span class="n">delete</span> <span class="n">l1</span> <span class="n">l2</span> <span class="o">:</span> <span class="k">&#39;&#39;</span><span class="n">a</span> <span class="kt">list</span> <span class="o">-&gt;</span> <span class="k">&#39;&#39;</span><span class="n">a</span> <span class="kt">list</span> <span class="o">-&gt;</span> <span class="k">&#39;&#39;</span><span class="n">a</span> <span class="kt">list</span> 
+<span class="n">delete</span> <span class="o">[</span><span class="mi">3</span><span class="o">,</span><span class="mi">4</span><span class="o">,</span><span class="mi">5</span><span class="o">]</span> <span class="o">[</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">,</span><span class="mi">4</span><span class="o">,</span><span class="mi">5</span><span class="o">,</span><span class="mi">6</span><span class="o">]</span> <span class="o">==&gt;</span> <span class="o">[</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">6</span><span class="o">]</span></code></pre></div>
+	<ul>
+		<li>To delete a list from the empty list, return the empty list.</li>
+		<li>To delete a list from a second list, if the first list starts the second list then drop the length of the first list from the second list.</li>
+		<li>Otherwise, put the head of the second list onto the result of deleting the first list from the tail of the second.</li>
+	</ul></li>
+	<li>Write a function to delete every occurrence of a list from another list:<br />
+<div class="highlight"><pre><code class="language-ocaml" data-lang="ocaml"><span class="n">deleteAll</span> <span class="n">l1</span> <span class="n">l2</span> <span class="o">:</span> <span class="k">&#39;&#39;</span><span class="n">a</span> <span class="kt">list</span> <span class="o">-&gt;</span><span class="k">&#39;&#39;</span><span class="n">a</span> <span class="kt">list</span> <span class="o">-&gt;</span> <span class="k">&#39;&#39;</span><span class="n">a</span> <span class="kt">list</span>
+<span class="n">deleteAll</span> <span class="o">[</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">]</span> <span class="o">[</span><span class="mi">3</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">]</span> <span class="o">==&gt;</span> <span class="o">[</span><span class="mi">3</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">2</span><span class="o">]</span></code></pre></div>
+	<ul>
+		<li>All occurrences have been deleted from an empty list.</li>
+		<li>If the first list starts the second list, delete it and then delete all occurrences in the remaining list.</li>
+		<li>Otherwise, put the head of the second list on the front of deleting all occurrences of the first list in the tail.</li>
+	</ul></li>
+</ol>
+<p><br></p>
+<h1>Question D (Essay-style, functional programming).</h1>
+<ol>
+	<li>Explain <em>recursion</em>.</li>
+	<li>Explain <em>tail recursion</em> and how it differs from plain old recursion.  If you want to write efficient code, which is better, and why?</li>
+	<li>Explain the <em>Church-Rosser property</em>, and how it is relevant to programming language execution.</li>
+	<li>The cost of running a calculation is calculated as follows: $programmer costs + computing costs = total costs$.  A more detailed equation is $design costs + programmer costs + debugging costs + computing costs = total costs$.  With these equations in mind, describe some of the trade-offs involved in choosing a programming language for an embedded chip in a car versus an Android app.</li>
+	<li>&#8220;Pure functional programming has no global state.&#8221;
+	<ol>
+		<li>Explain what this assertion means.</li>
+		<li>Give one advantage and one disadvantage of using a language without global state.</li>
+	</ol></li>
+	<li>Explain the different optimisations possible in imperative versus declarative programming, and the implications for space and time efficiency and development cost.</li>
+</ol>
+<p><br></p>
+<h1>Question E (Higher-order functions).</h1>
+<ol>
+	<li>Write a function of type <code>bool -&gt; bool -&gt; bool</code>.</li>
+	<li>How many different (in the sense of calculating different truth-tables) functions are there in <code>bool -&gt; bool -&gt; bool</code>?</li>
+	<li>Explain the similarities and differences between <code>fn (x:int) =&gt; x</code> and <code>fn (x:real) =&gt; x</code>.</li>
+	<li>Write two functions of type <code>('a -&gt; bool) -&gt; 'a list -&gt; bool</code>.
+	<ul>
+		<li>The first should return <code>true</code> when the first argument is true of <em>all</em> elements in the second argument;</li>
+		<li>the second should return <code>true</code> when the first argument is true of <em>some</em> element in the second argument.</li>
+	</ul></li>
+	<li>Write a function of type <code>'a -&gt; unit</code>.  Is it the only one?</li>
+	<li>Write a function of type <code>'a -&gt; ('a*'a)</code>.  Is it the only one?</li>
+	<li>Write a function of type <code>'a -&gt; 'b -&gt; ('a*'b)</code>.</li>
+	<li>How many different functions are there in <code>'a -&gt; 'b -&gt; ('a*'b)</code>?</li>
+	<li>Write a function of type <code>'a -&gt; 'a -&gt; ('a*'a)</code>.</li>
+	<li>How many different functions are there in <code>'a -&gt; 'a -&gt; ('a*'a)</code>?</li>
+	<li>Write a function of type <code>(('a -&gt; 'b)*'a) -&gt; 'b</code>.</li>
+	<li>How many different functions are there in <code>(('a -&gt; 'b)*'a) -&gt; 'b</code>?</li>
+	<li>Write a function of type <code>('a -&gt; 'b) -&gt; ('b -&gt; 'c) -&gt; ('a -&gt; 'c)</code>.</li>
+	<li>How many different functions are there in <code>('a -&gt; 'b) -&gt; ('b -&gt; 'c) -&gt; ('a -&gt; 'c)</code>?</li>
+	<li>Write a function of type <code>('a -&gt; ('b -&gt; 'c)) -&gt; ('a -&gt; 'b) -&gt; ('a -&gt; 'c)</code>.</li>
+	<li>(Hard) Using exceptions or otherwise, write a function of type <code>(unit -&gt; 'a)</code>.</li>
+</ol>
+<p>Example Q &amp; A.</p>
+<dl>
+	<dt><strong>Write a function of type <code>bool -&gt; bool</code>.</strong></dt>
+	<dt><strong>Model answer (clarification in italics)</strong></dt>
+	<dd>The obvious two are <code>fn (x:bool) =&gt; x</code> and <code>fn (x:bool) =&gt; true</code>.  <br />
+<em><code>fn x =&gt; x</code> and <code>fn x =&gt; true</code> are incorrect: they have type <code>'a -&gt; 'a</code> and <code>'a -&gt; bool</code>.</em></dd>
+	<dt><strong>Is it the only one?  If so, why?  If not, how many are there?</strong></dt>
+	<dt><strong>Model answer</strong></dt>
+	<dd><em>Many different programs of type <code>bool -&gt; bool</code> exist, such as (I drop type annotations) <code>fn x =&gt; true</code> and <code>fn x =&gt; if true then true</code> and <code>fn x =&gt; (x=x)</code> and <code>fn x =&gt; true</code>; however, these all implement the same function &#8220;map <code>x</code> to <code>true</code>&#8221;.</em>  <br />
+There are four: <code>fn (x:bool) =&gt; true</code>, <code>fn (x:bool) =&gt; false</code>, <code>fn (x:bool) =&gt; x</code>, and <code>fn x =&gt; not x</code>.</dd>
+	<dt><strong>Describe all functions of type <code>('a -&gt; 'a) -&gt; ('a -&gt; 'a)</code>.</strong></dt>
+	<dt><strong>Model answer</strong></dt>
+	<dd><em>So we&#8217;re given <code>f:'a -&gt; 'a</code> and we&#8217;re given <code>x:'a</code> and we want to make something of type <code>'a</code>.  Well this is not so hard: all we can do is apply <code>f</code> to <code>x</code> some finite (and possibly zero) number of times.  So we have</em>  <code>fn f =&gt; fn x =&gt; x</code>, <code>fn f =&gt; fn x =&gt; (f x)</code>, <code>fn f =&gt; fn x =&gt; (f (f x))</code>, and so on.  <em>Note how we follow the types!</em><br />
+<br></dd>
+</dl>
+<h1>Question F (Strings and chars).</h1>
+<ol>
+	<li>Write a function to remove all the non-letters off the front of a list of characters:<br />
+<code>strip [#".",#" ",#"t#,#"h",#"e"] ==&gt; [#"t",#"h",#"e"]</code>.
+	<ul>
+		<li>If the list is empty, return the empty list.</li>
+		<li>If the list starts with a letter, return the list.</li>
+		<li>Otherwise remove all the non-letters from the start of the tail of the list.</li>
+	</ul></li>
+	<li>Write a function to take the next word off a list of characters. The function returns a tuple of the word as a list of characters and the rest of the list.<br />
+<code>next [#"t",#"h",#"e",#" ",#"c",#"a",#"t",#" "…] ==&gt; ([#"t",#"h",#"e"],[#" ",#"c",#"a",#"t",#" " ...]) : char list * char list</code>.
+	<ul>
+		<li>If the list is empty, return a tuple of two empty lists.</li>
+		<li>If the list starts with a non-letter, return a tuple of the empty list and the list.</li>
+		<li>Otherwise, take the rest of the next word from the tail of the list returning a tuple of the rest of the next word and the rest of the tail of the list, put the head of the original list, which is the head of the word, onto the front of the rest of the word, and return the whole word list and the rest of the tail of the list.<br />
+Hint: use a let with a tuple pattern to match the tuple for the rest of word and rest of tail of list.</li>
+	</ul></li>
+	<li>Write a function to turn a list of characters into a list of individual words as strings.<br />
+<code>words [#"t",#"h",#"e",#" ",…] ==&gt; ["the","cat","sat","on","the","mat"] : string list</code>
+	<ul>
+		<li>If the list is empty, return an empty list.</li>
+		<li>Otherwise, get the first word from the stripped list as a list of characters and the rest of the list, get the list of words from the rest of list and put the imploded first word on the front of the word list.<br />
+Hint: use a local definition with a tuple pattern to match the first word and rest of list.</li>
+	</ul></li>
+	<li>Write a function to increment the count for a word in a list of words and counts.<br />
+<code>incCount "sat" [("cat",1),("the",1)] ==&gt; [("cat",1),("sat",1),("the",1)]  : (string * int) list</code><br />
+<code>incCount "the" [("cat",1),("mat",1),("on",1),("sat",1),("the",1)] ==&gt; [("cat",1),("mat",1),("on",1),("sat",1),("the",2)] : (string * int) list</code>
+	<ul>
+		<li>To increment the count for a word in an empty list, create a list with a tuple for the word and a count of 1.</li>
+		<li>To increment the count for a word in a list, if the word is the word in the first tuple, return the list with the first tuple’s count incremented.</li>
+		<li>Otherwise if the word comes before the word in the first tuple in the list, add a new tuple for the word and a count of 1 on the front of the list.</li>
+		<li>Otherwise, put the head of the list on the front of the result of incrementing the count for the word in the tail of the list.</li>
+	</ul></li>
+	<li>Write a function which given a list of words and an empty list, constructs the frequency count list.<br />
+<code>counts ["the","cat","sat","on","the","mat"] [] ==&gt; [("cat",1),(mat",1),("on",1),("sat",1),("the",2)];</code></li>
+	<li>Write a function which given a file name, opens the file, inputs the whole file as a string, explodes the string, makes the word count list, closes the file and returns the word count list.</li>
+	<li>Write a function which given a word count list displays it on standard output as a table of words and counts.</li>
+</ol>
+<p>Example Q &amp; A.</p>
+<dl>
+	<dt><strong>Write a function <code>twoFalse</code> which given a list of booleans, returns <code>true</code> if the list has two or more elements and the first two elements are <code>false</code>, and <code>false</code> otherwise.</strong></dt>
+	<dt><strong>Model answer</strong></dt>
+	<dd>Convert the question directly into ML code:<br />
+<code>fun twoFalse (false::false::_) = true | twoFalse _ = false</code>.  <br />
+Cut-and-paste into the compiler to make sure and run it on a couple of test cases, but it&#8217;s obviously correct because it&#8217;s just the statement of the question.<br />
+<em>Here are some bad answers, in increasing order of cosmic yeuchness:</em><br />
+<code>fun twoFalse x = if (hd x)=false and (hd(tl x))=false then true else false</code> <br />
+<code>fun twoFalse (x::y::tl) = if (not x) andalso (not y) then true | twoFalse x = false</code><br />
+<code>fun twoFalse x = if (length x)=0 then raise Subscript else ...</code> (I don&#8217;t like this: first, because the question doesn&#8217;t say &#8220;raise an exception&#8221; so you&#8217;re introducing behaviour that was not specified; and second, it&#8217;s actually rather dangerous behaviour because your program passes flow of control to the innermost <code>Subscript</code> handler, which we know nothing about: e.g. it could have been hacked by the North Korean government.)<br />
+<br></dd>
+</dl>
+<h1>Question G (Programming).</h1>
+<ol>
+	<li>Consider the representation of a binary number as a list of booleans, where the first boolean is the <em>least</em> significant digit.  Thus, <code>[false,true]</code> represents two and <code>[false,true,false,true]</code> represents ten.  Recall the school algorithm for addition, involving carrying ones over to more significant digits as appropriate.  <br> Implement this binary addition as a function of type <code>bool list -&gt; bool list -&gt; bool list</code>.</li>
+	<li>Using an accumulator variable or otherwise, write a function <code>max</code> of type <code>int list -&gt; int</code> that returns the greatest element of its input.</li>
+	<li>Using accumulator variables or otherwise, write a function <code>avg</code> of type <code>real list -&gt; real</code> that returns the average of a list.</li>
+	<li>(Harder) Using accumulator variables or otherwise, write a function <code>modes</code> of type <code>int list -&gt; (int list*int)</code> that returns the list of those integers that occur most often in the input, along with the number of times they occur (see <a href="https://www.purplemath.com/modules/meanmode.htm">mean, median, and mode</a>).  For example <code>modes [5,2,5,3,3]</code> should return <code>([5,3],2)</code> or <code>([3,5],2)</code>. <br />
+<br></li>
+</ol>
+<h1>Question H (Python lists, polymorphism, recursion, and reduce).</h1>
+<p>Make sure to test all your programs below, including on <code>[]</code>.</p>
+<ol>
+	<li>Using iteration (a for-next or a while loop or similar), write a program <code>mult1</code> that if given a list of integers or reals will return their product (the result of multiplying all the numbers together).  <br />
+We do not care about behaviour if <code>mult1</code> is not given a list of integers or reals; likewise for <code>mult2</code> and <code>mult3</code> below.<br />
+<code>mult1</code> should return <code>1</code> for the empty list, because <code>1</code> is the <strong>multiplicative unit</strong>.  Thus
+	<ul>
+		<li><code>mult1([])</code> calculates <code>1</code>, and</li>
+		<li><code>mult1([1,2,3,10])</code> calculates <code>60</code>.</li>
+	</ul></li>
+	<li>Using recursion, write a program <code>mult2</code> that if given a list of integers or reals will return their product (warning: this question is very slightly harder than it seems; make sure to test your answer).</li>
+	<li>Using <code>range</code> or otherwise, write a one-line piece of code that breaks <code>mult2</code> (i.e. make it crash when it &#8220;should&#8221; return a value).  Why did this happen?</li>
+	<li>Using Python lambda and <code>reduce</code> (see specifically the example on line 2 of <a href="https://docs.python.org/3/library/functools.html?highlight=reduce#functools.reduce">this link</a>), write a program <code>mult3</code> that if given a list of integers or reals, returns their product.</li>
+	<li>What do <code>mult1</code>, <code>mult2</code>, and <code>mult3</code> return if applied to <code>[1.0,2,3.0,10]</code>?  What would corresponding programs do if they were written in ML and applied to such an input?  What does this tell us about ML vs Python typing?</li>
+	<li>Order <code>mult1</code>, <code>mult2</code>, and <code>mult3</code> from slowest to fastest and explain your order.  There is no single &#8220;right&#8221; answer here, and this is a theoretical question, not an empirical one; you are welcome to measure performance but what interests me is your understanding.</li>
+	<li>An issue with the programs above is that they only work for numbers (integers or reals), however, there is no reason in principle they should not also work with strings or lists (by concatenation).  Note that in Python you can check whether a variable <code>x</code> has type <code>str</code> (for example) with <code>if type(x) is str: print("x is a string!")</code>, and similarly for lists <code>if type(x) is list: print("x is a list!")</code>.  <br> Write a program <code>multpoly</code> that outputs the product of a list of numbers, and the concatenation (i.e. chaining) of a list of strings or lists.  So
+	<ul>
+		<li><code>multpoly([1,2,3,10])</code> calculates <code>60</code>, and</li>
+		<li><code>multpoly(["1","2","3","10"])</code> calculates <code>"12310"</code>, and</li>
+		<li><code>multpoly([[1],[2,3],[10]])</code> calculates <code>[1,2,3,10]</code>.  <br />
+We do not care what <code>multpoly</code> calculates on the empty list.  We do care about a clear and elegant implementation.</li>
+	</ul></li>
+	<li>Using <code>if type(x) is list</code> or otherwise, write a <strong>recursive</strong> program <code>flatten</code> that inputs an arbitrarily nested list structure and outputs a &#8220;flattened&#8221; list consisting of the list of all the data in the list, but with any nested list structure removed.  So for instance,
+	<ul>
+		<li><code>flatten([])</code> returns <code>[]</code>, and</li>
+		<li><code>flatten([["hi"],5])</code> returns <code>["hi",5]</code>, and</li>
+		<li><code>flatten([[[],[["hello"],[" "]],[1],[[["world"]],[]]],"!"])</code> returns <code>["hello"," ",1,"world!"]</code>.</li>
+	</ul></li>
+</ol>
+<p><!-- Now write @flatten_mapreduce@ which reimplements @flatten@ but using "map":https://docs.python.org/3/library/functions.html#map and "reduce":https://docs.python.org/3/library/functools.html?highlight=reduce#functools.reduce. --></p>
+<h1>Question I (More Python)</h1>
+<ol>
+	<li>Write a program <code>factors</code> that inputs a number <code>n</code>, which you may assume is greater than 2, and outputs the list of its prime factors (prime numbers are 2, 3, 5, 7, 11, 13, 17, and so on).  You may assume basic arithmetic operations, including modulus <code>n % k</code> and divisibility.  However, if you find a library call &#8220;prime_factors_of&#8221;, you can&#8217;t use that, sorry.</li>
+	<li>Write a program <code>largest</code> that inputs a nonempty list of numbers and outputs its greatest element.  You do not need to worry about error-handling, e.g. if the input is the empty list.</li>
+	<li>Write a program <code>largest_factor</code> that inputs a number <code>n</code> and outputs its largest prime factor.</li>
+	<li>Write a program <code>firstbigfib</code> that inputs a number <code>n</code> and outputs the index of the first Fibonacci number to contain <code>n</code> digits.</li>
+	<li>Write a program <code>firstbigf</code> that inputs a number <code>n</code> and a function <code>f</code> mapping numbers to numbers, and outputs the least strictly positive number <code>i</code> (so <code>i</code> is in <code>[1,2,3,...]</code>) such that <code>f(i)</code> contains <code>n</code> digits.  So for example if <code>f=lambda x:10**x</code> then <code>firstbigf f 10</code> should calculate <code>9</code> (because <code>10**9</code>, which is equal to <code>1000000000</code>, has ten digits).</li>
+	<li>Suggest, in very general terms, how we might optimise <code>firstbigf</code> to run on a multicore architecture, with a roughly m-fold speedup where m is the number of cores.</li>
+	<li>A <strong>Pythagorean triple</strong> is a 3-tuple of strictly positive numbers <code>(x,y,z)</code> such that <code>z*z=x*x+y*y</code>.  Using Python generators (page 97 of <a href="http://www.macs.hw.ac.uk/~gabbay/F28PL/lectures/lecture-5-python.pdf">these slides</a> or <a href="https://wiki.python.org/moin/Generators">the generator that yields items example here</a>), write a Python generator function <code>triples()</code> to generate all Pythagorean triples.  So:
+	<ul>
+		<li><code>x=triples()</code> and then <code>next(x)</code> should return a first triple, and then</li>
+		<li><code>next(x)</code> should return a second triple, and then</li>
+		<li><code>next(x)</code> should return a third one, and so on.<br />
+Test your program further by running it on <code>list(itertools.islice(triples(), 1, 300))</code> (using the Internet or otherwise, make sure you understand what this does; you may need to <code>import itertools</code>).</li>
+	</ul></li>
+</ol>
+<h1>Question J (Python lists, sets, and dictionaries)</h1>
+<ol>
+	<li>State what the following Python programs calculate, and explain why:
+	<ol>
+		<li><code>{ 0:"zero", 1:"one", 2:"two" }[1]</code></li>
+		<li><code>range(1000)[0]</code></li>
+		<li><code>for x in range(1,1000): print(list(enumerate(range(x)))[0][0])</code></li>
+		<li><code>"hello world"[:-2]</code></li>
+	</ol></li>
+	<li>Explain the difference in behaviour between the following two code snippets:<br />
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="s">&quot;&quot;</span><span class="p">]</span> <span class="c"># Snippet 1</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">)</span>
+<span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="s">&quot;&quot;</span><span class="p">]</span> <span class="c"># Snippet 2</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">[:]:</span> <span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">)</span></code></pre></div></li>
+	<li>Explain the behaviour of the following code snippet:<br />
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">x</span><span class="o">=</span><span class="p">[[]]</span> <span class="p">;</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+   <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+   <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span></code></pre></div></li>
+	<li>The following Python program returns an error. <br />
+<code>{[0]:0}[[0]]</code>
+	<ol>
+		<li>Explain what the error is and why it arises.</li>
+		<li>Suggest how to fix it.</li>
+	</ol></li>
+	<li>Using list comprehensions and lambda, write a program that if given a number <code>n</code>, calculates the first <code>n</code> even numbers (starting from <code>0</code>).</li>
+	<li>Using list comprehensions and lambda, write a program that if given a list of numbers <code>l</code>, will return the sublist of those numbers in <code>l</code> that are divisible by 3.</li>
+	<li>The <code>zip</code> function inputs two lists (which you may assume have the same length) and outputs the list of pairs of the lists &#8216;zipped&#8217; together.  For instance, <code>zip([1,2,3],["one","two","three"])</code> returns <code>[(1,"one"),(2,"two"),(3,"three")]</code>.  Implement <code>zip</code> yourself, from first principles, using list comprehension (so <strong>not</strong> using a for-next loop and the <code>append</code> method; too easy).</li>
+	<li>The following Python programs calculates the first ten squares and the first ten <a href="https://en.wikipedia.org/wiki/Pentagonal_number">pentagonal numbers</a>: <br />
+<code>squares = [x*x for x in range(10)]</code><br />
+<code>pentagonals = [x*(3*x-1)//2 for x in range(10)]</code><br />
+(For this question, <code>0</code> is a square and a pentagonal number.)<br />
+Based on those examples, and using list comprehensions if possible, write a Python program that calculates a list of numbers that are both square and pentagonal (up to some computational bound, i.e. the program is allowed to stop after a while).  Test your program by calculating the first four such numbers.</li>
+	<li>Nonnegative integers can be implemented in Python by <code>nest(0)=[]</code> and <code>nest(n+1)=[nest(n)]</code>.  Write programs <code>nest</code> and <code>unnest</code> which translate between nonnegative integers and the nesting implemenation.<br />
+We do not care what happens at incorrect input.  Implement addition and multiplication as direct functions on this implementation (i.e. not by untranslating, adding the numbers, and retranslating). <br />
+(The student who finds this kind of thing amusing, might be interested in the <a href="https://en.wikipedia.org/wiki/Surreal_number">surreal numbers</a>.)</li>
+</ol>
+<p><br></p>
+<h1>Question K (Prolog)</h1>
+<ol>
+	<li>Write Prolog clauses for the following scenario:
+	<ol>
+		<li>Jake is a person</li>
+		<li>Jill is a person</li>
+		<li>John is a person</li>
+		<li>Joan is a person</li>
+		<li>Jake likes tomato</li>
+		<li>Jill likes cheese</li>
+		<li>Jill likes tomato</li>
+		<li>John likes cheese</li>
+		<li>Joan likes cheese</li>
+		<li>Joan likes tomato</li>
+		<li>Jake knows Jill</li>
+		<li>Jill knows John</li>
+		<li>John knows Joan</li>
+		<li>Joan knows Jake</li>
+		<li>Every person knows themself</li>
+		<li>If a person likes cheese and that person likes tomato then they like pizza</li>
+	</ol></li>
+	<li>Test your program by writing questions to check:
+	<ol>
+		<li>Whether Jake likes pizza</li>
+		<li>Which persons like pizza</li>
+		<li>Which persons know other persons who likes pizza</li>
+	</ol></li>
+	<li>Write Prolog clauses for the following scenario:
+	<ol>
+		<li>Aberdeen is a place</li>
+		<li>Dundee is a place</li>
+		<li>Edinburgh is a place</li>
+		<li>Glasgow is a place</li>
+		<li>Kirkcaldy is a place</li>
+		<li>St Andrews is a place</li>
+		<li>There are 60 miles between Aberdeen and Dundee</li>
+		<li>There are 60 miles between Dundee and Edinburgh</li>
+		<li>There are 45 miles between St Andrews and Edinburgh</li>
+		<li>There are 10 miles between Dundee and St Andrews</li>
+		<li>There are 60 miles between Dundee and Aberdeen</li>
+		<li>There are 30 miles between St Andrews and Kirkcaldy</li>
+		<li>There are 35 miles between Kirkcaldy and Edinburgh</li>
+		<li>There are 45 miles between Glasgow and Edinburgh</li>
+		<li>The miles from a first place to a second place is the miles between the first place and the second place or the miles between the second place and the first place</li>
+		<li>The distance between a first and second place is the miles from the first to the second or the miles from the first to a third place plus the distance between the third and second place</li>
+	</ol></li>
+	<li>Test your program by writing questions to find distances between:
+	<ol>
+		<li>Edinburgh and St Andrews</li>
+		<li>Aberdeen and Glasgow.</li>
+	</ol></li>
+</ol>
+<p>Note that you are not required to identify different routes between these pairs of places.</p>
+<p><br></p>
+<h1>Question Z</h1>
+<ol>
+	<li>(Reasonable) The Bubblesort and Quicksort algorithms all have type <code>int list -&gt; int list</code>.
+	<ol>
+		<li>Implement Bubblesort in ML.</li>
+		<li>Implement Quicksort in ML.</li>
+	</ol></li>
+	<li>(Hard) Write a pair of functions <code>tofun : int -&gt; ('a-&gt;'a)</code> and <code>fromfun : ('a-&gt;'a) -&gt; int</code> such that <code>(fromfun o tofun) n</code> evaluates to <code>n</code> for every <code>n:int</code>.  Do not use exceptions.</li>
+	<li>(Infernal) Write a function of type <code>(('a -&gt; 'b) -&gt; 'b) -&gt; 'a</code>.</li>
+	<li>(Very hard) Implement the Tower of Hanoi as a function of type <code>unit -&gt; (int list*int list*int list)</code>.</li>
+	<li>(Very hard) What does this program calculate, and how?<br />
+<code>f = lambda x: [[y for j, y in enumerate(set(x)) if (i &gt;&gt; j) &amp; 1] for i in range(2**len(set(x)))]</code></li>
+</ol>
+</div>
+
+
+    <!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=3319033; 
+var sc_invisible=1; 
+var sc_security="b614d795"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="//c.statcounter.com/3319033/0/b614d795/1/" alt="Web
+Analytics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+ 
+    </body>
+<!-- MathJax Section -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+<script>
+  MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  });
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+  MathJax.Hub.Config({    
+    extensions : ["tex2jax.js"],
+    "HTML-CSS": { scale: 86 }
+  }); 
+</script>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript" src="/~gabbay/animatedcollapse.js">
+/***********************************************
+* Animated Collapsible DIV v2.4- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+***********************************************/
+</script>
+<script type="text/javascript">
+animatedcollapse.addDiv('A1', 'fade=1,speed=400,group=answers,persist=1,hide=1')
+animatedcollapse.addDiv('A2', 'fade=1,speed=400,group=answers,persist=1,hide=1')
+animatedcollapse.addDiv('A3', 'fade=1,speed=400,group=answers,persist=1,hide=1')
+animatedcollapse.addDiv('A4', 'fade=1,speed=400,group=answers,persist=1,hide=1')
+animatedcollapse.addDiv('A5', 'fade=1,speed=400,group=answers,persist=1,hide=1')
+animatedcollapse.addDiv('A6', 'fade=1,speed=400,group=answers,persist=1,hide=1')
+animatedcollapse.addDiv('A7', 'fade=1,speed=400,group=answers,persist=1,hide=1')
+animatedcollapse.addDiv('A8', 'fade=1,speed=400,group=answers,persist=1,hide=1')
+
+animatedcollapse.ontoggle=function($, divobj, state){ //fires each time a DIV is expanded/contracted
+	//$: Access to jQuery
+	//divobj: DOM reference to DIV being expanded/ collapsed. Use "divobj.id" to get its ID
+	//state: "block" or "none", depending on state
+}
+
+animatedcollapse.init()
+</script>
+
+
+
+
+</html>
