@@ -1,0 +1,25 @@
+2015-11-15 13:37:21,829 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @4907376ms
+2015-11-15 13:37:22,037 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.2.9.v20150224
+2015-11-15 13:37:22,117 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@2f954c5d{/help,null,AVAILABLE}
+2015-11-15 13:37:22,123 [Start Help Server] INFO  o.e.jetty.server.ServerConnector - Started ServerConnector@2e6a2522{HTTP/1.1}{127.0.0.1:49813}
+2015-11-15 13:37:22,124 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @4907687ms
+2015-11-15 13:44:59,999 [Stop Help Server] INFO  o.e.jetty.server.ServerConnector - Stopped ServerConnector@2e6a2522{HTTP/1.1}{127.0.0.1:0}
+2015-11-15 13:45:00,031 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@2f954c5d{/help,null,UNAVAILABLE}
+2015-12-10 16:23:19,623 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @5760067ms
+2015-12-10 16:23:19,928 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.2.9.v20150224
+2015-12-10 16:23:20,024 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@4d73368f{/help,null,AVAILABLE}
+2015-12-10 16:23:20,215 [Start Help Server] INFO  o.e.jetty.server.ServerConnector - Started ServerConnector@542b1127{HTTP/1.1}{127.0.0.1:49840}
+2015-12-10 16:23:20,216 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @5760675ms
+2015-12-10 16:36:26,423 [Stop Help Server] INFO  o.e.jetty.server.ServerConnector - Stopped ServerConnector@542b1127{HTTP/1.1}{127.0.0.1:0}
+2015-12-10 16:36:26,443 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@4d73368f{/help,null,UNAVAILABLE}
+2015-12-10 22:55:28,670 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @8685ms
+2015-12-10 22:55:28,735 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.2.9.v20150224
+2015-12-10 22:55:28,764 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@5fd843fa{/help,null,AVAILABLE}
+2015-12-10 22:55:28,916 [Start Help Server] INFO  o.e.jetty.server.ServerConnector - Started ServerConnector@4e7a42bf{HTTP/1.1}{127.0.0.1:50717}
+2015-12-10 22:55:28,917 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @8934ms
+2015-12-11 18:27:34,572 [Stop Help Server] INFO  o.e.jetty.server.ServerConnector - Stopped ServerConnector@4e7a42bf{HTTP/1.1}{127.0.0.1:0}
+2015-12-11 18:27:34,701 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@5fd843fa{/help,null,UNAVAILABLE}
+2015-12-12 13:55:03,132 [main] WARN  o.e.r.i.c.r.ChainCompletionProposalComputer - Can't handle %s as source for finding entrypoints.
+2016-02-02 10:59:08,260 [main] WARN  o.e.r.i.c.rcp.TypeBindingAnalyzer - Can't handle class org.eclipse.jdt.internal.compiler.ast.AllocationExpression as parent of completion location.
+2016-02-09 12:20:42,167 [main] WARN  o.e.r.i.c.rcp.TypeBindingAnalyzer - Can't handle class org.eclipse.jdt.internal.compiler.ast.AllocationExpression as parent of completion location.
+2016-02-10 12:53:52,361 [main] WARN  o.e.r.i.c.rcp.TypeBindingAnalyzer - Can't handle class org.eclipse.jdt.internal.compiler.ast.AllocationExpression as parent of completion location.

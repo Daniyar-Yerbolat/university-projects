@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/F27SA1/!svn/ver/1018/SD2/src/lab2/network1
+END
+README.TXT
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/F27SA1/!svn/ver/1018/SD2/src/lab2/network1/README.TXT
+END
+StartNetwork.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/F27SA1/!svn/ver/1018/SD2/src/lab2/network1/StartNetwork.java
+END
+MessagePost.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/F27SA1/!svn/ver/1018/SD2/src/lab2/network1/MessagePost.java
+END
+PhotoPost.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/F27SA1/!svn/ver/1018/SD2/src/lab2/network1/PhotoPost.java
+END
+NewsFeed.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/F27SA1/!svn/ver/1018/SD2/src/lab2/network1/NewsFeed.java
+END

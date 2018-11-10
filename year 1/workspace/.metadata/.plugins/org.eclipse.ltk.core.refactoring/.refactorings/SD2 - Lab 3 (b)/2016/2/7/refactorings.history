@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;fontsize&apos; in &apos;CalculatorTest.main(...)&apos; to &apos;calculator&apos;&#x0D;&#x0A;- Original project: &apos;SD2 - Lab 3 (b)&apos;&#x0D;&#x0A;- Original element: &apos;CalculatorTest.main(String[]).fontsize&apos;&#x0D;&#x0A;- Renamed element: &apos;fontsize&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;fontsize&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{CalculatorTest.java[CalculatorTest~main~\[QString;@fontsize!152!190!163!170!QCalculator;!0!false" name="calculator" references="true" stamp="1455094919009" version="1.0"/>
+</session>
