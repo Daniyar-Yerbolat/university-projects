@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Move element &apos;Player.java&apos; to &apos;SD2 - Lab 7/src/lab1.zuulRefactored&apos;&#x0D;&#x0A;- Original project: &apos;SD2 - Lab 6&apos;&#x0D;&#x0A;- Destination element: &apos;SD2 - Lab 7/src/lab1.zuulRefactored&apos;&#x0D;&#x0A;- Original element: &apos;lab1.zuulBad.Player.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="=SD2 - Lab 7/src&lt;lab1.zuulRefactored" element1="/src&lt;lab1.zuulBad{Player.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1458023261580" units="1" version="1.0"/>
-</session>

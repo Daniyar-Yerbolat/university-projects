@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename local variable &apos;headline&apos; in &apos;DisplayTest.main(...)&apos; to &apos;display&apos;&#x0D;&#x0A;- Original project: &apos;SD2 - Tutorial 4&apos;&#x0D;&#x0A;- Original element: &apos;DisplayTest.main(String[]).headline&apos;&#x0D;&#x0A;- Renamed element: &apos;headline&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;headline&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{DisplayTest.java[DisplayTest~main~\[QString;@headline!149!181!157!164!QDisplay;!0!false" name="display" references="true" stamp="1456219511736" version="1.0"/>
-</session>

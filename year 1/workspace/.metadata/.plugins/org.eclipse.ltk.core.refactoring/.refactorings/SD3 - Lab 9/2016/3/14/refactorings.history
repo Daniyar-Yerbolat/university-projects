@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename local variable &apos;swapped&apos; in &apos;ArraySort.bubbleSort(...)&apos; to &apos;stop&apos;&#x0D;&#x0A;- Original project: &apos;SD3 - Lab 9&apos;&#x0D;&#x0A;- Original element: &apos;ArraySort.bubbleSort(int[]).swapped&apos;&#x0D;&#x0A;- Renamed element: &apos;swapped&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;swapped&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{ArraySort.java[ArraySort~bubbleSort~\[I@swapped!171!193!179!185!Z!0!false" name="stop" references="true" stamp="1459344635627" version="1.0"/>
-</session>

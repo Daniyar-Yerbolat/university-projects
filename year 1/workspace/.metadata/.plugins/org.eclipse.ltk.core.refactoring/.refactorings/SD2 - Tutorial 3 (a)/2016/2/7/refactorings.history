@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename local variable &apos;fontsize&apos; in &apos;TimerTest.main(...)&apos; to &apos;timer&apos;&#x0D;&#x0A;- Original project: &apos;SD2 - Tutorial 3 (a)&apos;&#x0D;&#x0A;- Original element: &apos;TimerTest.main(String[]).fontsize&apos;&#x0D;&#x0A;- Renamed element: &apos;fontsize&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;fontsize&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{TimerTest.java[TimerTest~main~\[QString;@fontsize!147!175!153!160!QTimer;!0!false" name="timer" references="true" stamp="1455011290325" version="1.0"/>
-</session>
