@@ -1,0 +1,100 @@
+/*UNIQUE HTML CODE #3*/
+img#game
+{
+	height: 300px;
+	width: 500px;
+	margin: auto;
+
+	border: solid black;
+	background-color: white;
+
+
+}
+aside#aside-block-3 {
+
+	float: left;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	margin:20px 20px 0 20px;
+	padding: 20px 20px 0 20px;
+
+	background: url("../textures/texture-main.png") top left repeat;
+}
+div#container-content-3 {
+
+	text-align: center;
+	margin: 20px auto 0 auto;
+	background: url("../textures/texture-main.png") top left repeat;
+
+	float: left;
+	padding: 20px 20px 0 20px;
+
+
+	/*Needed so that header and content div won't overlap*/
+	z-index: 0;	
+}
+
+div#container-content-3 ul {
+	
+	list-style: none;
+	display: block;
+
+	height:225px;
+	margin: 30px auto;
+	text-align: center;
+
+
+}
+div#container-content-3 ul li {
+	display: inline-block;
+	width:350px;
+	height:250px;
+	margin:5px auto;
+
+	/*Need to use relative to center the image with absolute*/
+	position: relative;
+
+	vertical-align: middle;
+}
+
+div#container-content-3 ul li h1{
+	font-size: 20px;
+
+	}
+
+div#container-content-3 ul li a:hover img{
+	height: 180px;
+	width: 280px;
+}
+
+#container-content-3 table, #container-content-3 th, #container-content-3 td{
+	border: 2px solid black;
+	border-collapse: collapse;
+}
+
+#container-content-3 table{
+	margin: 10px auto;
+	padding: 5px;
+
+}
+#container-content-3 table th{
+	font-size: 20px;
+	text-transform: uppercase;
+	padding: 20px;
+	background-color: #00B25C;
+	width: 300px;
+}
+#container-content-3 table td{
+	margin-top: 30px;
+	height: 250px;
+	background-color: #FF4100;
+}
+#container-content-3 table img{
+	width: 250px;
+	margin: auto;
+	border: solid black;
+	background-color: white;
+	padding: 5px;
+
+}

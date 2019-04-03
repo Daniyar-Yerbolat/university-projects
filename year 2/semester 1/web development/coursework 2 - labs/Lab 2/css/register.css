@@ -1,0 +1,10 @@
+.register section{
+	display: inline-block;
+	margin: 20px 5px;
+	border:1px solid black;
+	padding: 20px 5px;
+}
+
+.register input[type="submit"]{
+	margin-left: 5px;
+}

@@ -1,0 +1,26 @@
+if ($connection == true){
+			$query = "SELECT movieTitle, movieGenre, movieType, movieRating FROM users as u inner join users_movies as u_m on u_m.userID=u.userID inner join movies on u_m.movieID=movies.movieID where u.username=:user";
+			$result = $connection->prepare($query);
+			$result->execute(['user' => $user]);
+			if(count($result)>0){
+			print "<table>\n";
+			print "<tr>\n";
+			print "<th>Title</th>\n";
+			print "<th>Genre</th>\n";
+			print "<th>Available in english?</th>\n";
+			print "<th>Rating</th>\n";
+			print "</tr>\n";
+	    	foreach ($result as $row) {
+	        	print "<tr>\n";
+				print "<td>".$row['movieTitle']."</td>\n";
+				print "<td>".$row['movieGenre']."</td>\n";
+				if($row['movieType']==1){
+					print "<td>yes</td>\n";}
+				else{
+					print "<td>no</td>\n";
+				}
+				print "<td>".$row['movieRating']."</td>\n";
+				print "</tr>\n";
+	    	}
+	       
+	       	print "</table>\n";

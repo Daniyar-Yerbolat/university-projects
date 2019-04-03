@@ -1,0 +1,55 @@
+div#container-content-1 {
+	min-width:50%;
+	min-height:75%;
+	margin: 30px 0 50px 0;
+	background: url("../textures/texture-main.png") top left repeat;
+	float: left;
+	padding: 20px;
+	/*Needed so that header and content div won't overlap*/
+	z-index: 0;
+}
+
+h1#headline {
+	text-align: center;
+}
+
+div#container-content-1 img {
+	display: block;
+	height: 150px;
+	width: 250px;
+	border: solid black;
+	background-color: white;
+	margin: auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+div#container-content-1 ul {
+	list-style: none;
+	display: block;
+	height: 225px;
+	margin: 30px auto;
+	text-align: center;
+}
+
+div#container-content-1 ul li {
+	display: inline-block;
+	width: 350px;
+	height: 250px;
+	margin: 5px auto;
+	/*Need to use relative to center the image with absolute*/
+	position: relative;
+	vertical-align: middle;
+}
+
+div#container-content-1 ul li h1 {
+	font-size: 20px;
+}
+
+div#container-content-1 ul li a:hover img {
+	height: 180px;
+	width: 280px;
+}

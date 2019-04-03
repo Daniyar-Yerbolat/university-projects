@@ -1,0 +1,27 @@
+div#container-content-4 {
+
+	margin: 20px auto 0 auto;
+
+	background: url("../textures/texture-main.png") top left repeat;
+
+	padding: 20px;
+
+
+	/*Needed so that header and content div won't overlap*/
+	z-index: 0;
+}
+
+form.register{
+	margin: 0 auto;
+	display: block;
+	width: 40%;
+}
+
+form.register section{
+	float:left;
+}
+
+.options{
+	padding-left: 40px;
+	background:transparent url("../flags/Burundi.png") left center no-repeat;
+}

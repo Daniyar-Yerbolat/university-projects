@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/F27SA1/!svn/ver/1018/SD2/src/lab3/foxesAndRabbits2
+END
+README.TXT
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/F27SA1/!svn/ver/1018/SD2/src/lab3/foxesAndRabbits2/README.TXT
+END
+Fox.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/F27SA1/!svn/ver/1018/SD2/src/lab3/foxesAndRabbits2/Fox.java
+END
+StartFoxesAndRabbits.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/F27SA1/!svn/ver/1018/SD2/src/lab3/foxesAndRabbits2/StartFoxesAndRabbits.java
+END
+Animal.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/F27SA1/!svn/ver/1018/SD2/src/lab3/foxesAndRabbits2/Animal.java
+END
+Counter.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/F27SA1/!svn/ver/1018/SD2/src/lab3/foxesAndRabbits2/Counter.java
+END
+Field.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/F27SA1/!svn/ver/1018/SD2/src/lab3/foxesAndRabbits2/Field.java
+END
+Rabbit.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/F27SA1/!svn/ver/1018/SD2/src/lab3/foxesAndRabbits2/Rabbit.java
+END
+SimulatorView.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/F27SA1/!svn/ver/1018/SD2/src/lab3/foxesAndRabbits2/SimulatorView.java
+END
+FieldStats.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/F27SA1/!svn/ver/1018/SD2/src/lab3/foxesAndRabbits2/FieldStats.java
+END
+Location.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/F27SA1/!svn/ver/1018/SD2/src/lab3/foxesAndRabbits2/Location.java
+END
+Simulator.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/F27SA1/!svn/ver/1018/SD2/src/lab3/foxesAndRabbits2/Simulator.java
+END
+StartSimulator.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/F27SA1/!svn/ver/1018/SD2/src/lab3/foxesAndRabbits2/StartSimulator.java
+END
+Randomizer.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/F27SA1/!svn/ver/1018/SD2/src/lab3/foxesAndRabbits2/Randomizer.java
+END

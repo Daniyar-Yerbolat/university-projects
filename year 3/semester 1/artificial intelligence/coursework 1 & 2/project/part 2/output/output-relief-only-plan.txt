@@ -1,0 +1,134 @@
+
+ff: parsing domain file
+domain 'DOMAIN1' defined
+ ... done.
+ff: parsing problem file
+problem 'PROBLEM2' defined
+ ... done.
+
+
+
+Cueing down from goal distance:   40 into depth [1]
+                                  39            [1]
+                                  34            [1]
+                                  33            [1]
+                                  32            [1]
+                                  31            [1]
+                                  30            [1]
+                                  29            [1]
+                                  23            [1][2]
+                                  22            [1]
+                                  21            [1]
+                                  20            [1][2]
+                                  19            [1][2][3][4][5][6]
+                                  18            [1][2][3]
+                                  17            [1]
+                                  16            [1]
+                                  15            [1][2][3][4][5][6]
+                                  14            [1][2][3]
+                                  13            [1]
+                                  12            [1]
+                                  11            [1][2][3][4][5][6]
+                                  10            [1][2][3]
+                                   9            [1]
+                                   8            [1]
+                                   7            [1][2][3][4][5]
+                                   6            [1][2][3]
+                                   5            [1]
+                                   4            [1]
+                                   3            [1]
+                                   2            [1]
+                                   1            [1]
+                                   0            
+
+Cueing down from goal distance:    9 into depth [1]
+                                   8            [1]
+                                   7            [1]
+                                   6            [1]
+                                   5            [1]
+                                   4            [1]
+                                   3            [1]
+                                   2            [1]
+                                   1            [1]
+                                   0            
+
+ff: found legal plan as follows
+
+step    0: ORDER NAVIGATOR
+        1: MOVE TRANSPORTER-CHIEF BRIDGE LIFT3
+        2: MOVE MEDICAL-PERSONNEL BRIDGE LIFT3
+        3: MOVE TRANSPORTER-CHIEF LIFT3 LIFT2
+        4: MOVE MEDICAL-PERSONNEL LIFT3 LIFT2
+        5: MOVE TRANSPORTER-CHIEF LIFT2 HALL2
+        6: MOVE MEDICAL-PERSONNEL LIFT2 HALL2
+        7: MOVE TRANSPORTER-CHIEF HALL2 TRANSPORTER-ROOM
+        8: MOVE MEDICAL-PERSONNEL HALL2 SICKBAY
+        9: PICK-UP MEDICAL-PERSONNEL MEDICAL1 SICKBAY
+       10: MOVE-WITH-LIGHT-EQUIPMENT MEDICAL-PERSONNEL MEDICAL1 SICKBAY HALL2
+       11: MOVE-WITH-LIGHT-EQUIPMENT MEDICAL-PERSONNEL MEDICAL1 HALL2 TRANSPORTER-ROOM
+       12: TRAVEL EARTH JUPITER CAPTAIN BRIDGE TRANSPORTER-ROOM SHUTTLE-BAY TRANSPORTER-CHIEF NORMANDY NAVIGATOR
+       13: ORDER NAVIGATOR
+       14: MOVE-WITH-LIGHT-EQUIPMENT MEDICAL-PERSONNEL MEDICAL1 TRANSPORTER-ROOM JUPITER
+       15: DROP MEDICAL-PERSONNEL MEDICAL1 JUPITER
+       16: MISSION-RELIEF JUPITER MEDICAL-PERSONNEL MEDICAL1
+       17: MOVE MEDICAL-PERSONNEL JUPITER TRANSPORTER-ROOM
+       18: TRAVEL JUPITER MERCURY CAPTAIN BRIDGE TRANSPORTER-ROOM SHUTTLE-BAY TRANSPORTER-CHIEF NORMANDY NAVIGATOR
+       19: ORDER NAVIGATOR
+       20: MOVE MEDICAL-PERSONNEL TRANSPORTER-ROOM HALL2
+       21: MOVE MEDICAL-PERSONNEL HALL2 SICKBAY
+       22: PICK-UP MEDICAL-PERSONNEL MEDICAL2 SICKBAY
+       23: MOVE-WITH-LIGHT-EQUIPMENT MEDICAL-PERSONNEL MEDICAL2 SICKBAY HALL2
+       24: MOVE-WITH-LIGHT-EQUIPMENT MEDICAL-PERSONNEL MEDICAL2 HALL2 TRANSPORTER-ROOM
+       25: MOVE-WITH-LIGHT-EQUIPMENT MEDICAL-PERSONNEL MEDICAL2 TRANSPORTER-ROOM MERCURY
+       26: DROP MEDICAL-PERSONNEL MEDICAL2 MERCURY
+       27: MISSION-RELIEF MERCURY MEDICAL-PERSONNEL MEDICAL2
+       28: MOVE MEDICAL-PERSONNEL MERCURY TRANSPORTER-ROOM
+       29: TRAVEL MERCURY PLUTO CAPTAIN BRIDGE TRANSPORTER-ROOM SHUTTLE-BAY TRANSPORTER-CHIEF NORMANDY NAVIGATOR
+       30: ORDER NAVIGATOR
+       31: MOVE MEDICAL-PERSONNEL TRANSPORTER-ROOM HALL2
+       32: MOVE MEDICAL-PERSONNEL HALL2 SICKBAY
+       33: PICK-UP MEDICAL-PERSONNEL MEDICAL3 SICKBAY
+       34: MOVE-WITH-LIGHT-EQUIPMENT MEDICAL-PERSONNEL MEDICAL3 SICKBAY HALL2
+       35: MOVE-WITH-LIGHT-EQUIPMENT MEDICAL-PERSONNEL MEDICAL3 HALL2 TRANSPORTER-ROOM
+       36: MOVE-WITH-LIGHT-EQUIPMENT MEDICAL-PERSONNEL MEDICAL3 TRANSPORTER-ROOM PLUTO
+       37: DROP MEDICAL-PERSONNEL MEDICAL3 PLUTO
+       38: MISSION-RELIEF PLUTO MEDICAL-PERSONNEL MEDICAL3
+       39: MOVE MEDICAL-PERSONNEL PLUTO TRANSPORTER-ROOM
+       40: TRAVEL PLUTO MARS CAPTAIN BRIDGE TRANSPORTER-ROOM SHUTTLE-BAY TRANSPORTER-CHIEF NORMANDY NAVIGATOR
+       41: ORDER NAVIGATOR
+       42: MOVE MEDICAL-PERSONNEL TRANSPORTER-ROOM HALL2
+       43: MOVE MEDICAL-PERSONNEL HALL2 SICKBAY
+       44: PICK-UP MEDICAL-PERSONNEL MEDICAL4 SICKBAY
+       45: MOVE-WITH-LIGHT-EQUIPMENT MEDICAL-PERSONNEL MEDICAL4 SICKBAY HALL2
+       46: MOVE-WITH-LIGHT-EQUIPMENT MEDICAL-PERSONNEL MEDICAL4 HALL2 TRANSPORTER-ROOM
+       47: MOVE-WITH-LIGHT-EQUIPMENT MEDICAL-PERSONNEL MEDICAL4 TRANSPORTER-ROOM MARS
+       48: DROP MEDICAL-PERSONNEL MEDICAL4 MARS
+       49: MISSION-RELIEF MARS MEDICAL-PERSONNEL MEDICAL4
+       50: MOVE MEDICAL-PERSONNEL MARS TRANSPORTER-ROOM
+       51: TRAVEL MARS MOON CAPTAIN BRIDGE TRANSPORTER-ROOM SHUTTLE-BAY TRANSPORTER-CHIEF NORMANDY NAVIGATOR
+       52: MOVE MEDICAL-PERSONNEL TRANSPORTER-ROOM HALL2
+       53: MOVE MEDICAL-PERSONNEL HALL2 SICKBAY
+       54: PICK-UP MEDICAL-PERSONNEL MEDICAL5 SICKBAY
+       55: MOVE-WITH-LIGHT-EQUIPMENT MEDICAL-PERSONNEL MEDICAL5 SICKBAY HALL2
+       56: MOVE-WITH-LIGHT-EQUIPMENT MEDICAL-PERSONNEL MEDICAL5 HALL2 TRANSPORTER-ROOM
+       57: MOVE-WITH-LIGHT-EQUIPMENT MEDICAL-PERSONNEL MEDICAL5 TRANSPORTER-ROOM MOON
+       58: DROP MEDICAL-PERSONNEL MEDICAL5 MOON
+       59: MISSION-RELIEF MOON MEDICAL-PERSONNEL MEDICAL5
+       60: ORDER NAVIGATOR
+       61: MOVE MEDICAL-PERSONNEL MOON TRANSPORTER-ROOM
+       62: MOVE ENGINEER BRIDGE LIFT3
+       63: MOVE ENGINEER LIFT3 LIFT2
+       64: MOVE ENGINEER LIFT2 LIFT1
+       65: MOVE ENGINEER LIFT1 HALL1
+       66: MOVE ENGINEER HALL1 ENGINEERING
+       67: FIX-SHIP NORMANDY ENGINEER ENGINEERING
+       68: TRAVEL MOON EARTH CAPTAIN BRIDGE TRANSPORTER-ROOM SHUTTLE-BAY TRANSPORTER-CHIEF NORMANDY NAVIGATOR
+     
+
+time spent:    0.00 seconds instantiating 45345 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 2315 facts and 8194 actions
+               0.00 seconds creating final representation with 1116 relevant facts
+               0.00 seconds building connectivity graph
+               0.22 seconds searching, evaluating 541 states, to a max depth of 6
+               0.22 seconds total time
+

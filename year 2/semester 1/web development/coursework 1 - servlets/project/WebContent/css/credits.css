@@ -1,0 +1,48 @@
+#audio {
+	font-weight: 700;
+	text-decoration: underline;
+	color: black;
+	position: absolute;
+	top: 3%;
+	right: 5%;
+	text-align: center;
+	background-color: transparent;
+	background-repeat: no-repeat;
+}
+
+.credits {
+	min-width: 50%;
+	min-height: 900px;
+	overflow:hidden;
+	margin: 30px 0 50px 0;
+	background: url("../textures/texture-main.png") top left repeat;
+	float: left;
+	padding: 20px;
+	position:relative;
+	
+}
+
+.credits h1 {
+	margin-top: 25px;
+}
+
+.wrapper {
+	margin-left:30px;
+	position:absolute;
+	bottom:0%;
+	animation: 60s credits linear infinite;
+	z-index: inherit;
+}
+
+@keyframes credits {
+	 0%   { 
+ -moz-transform: translateY(100%); /* Browser bug fix */
+ -webkit-transform: translateY(100%); /* Browser bug fix */
+ transform: translateY(100%);	
+ }
+ 100% { 
+ -moz-transform: translateY(-100%); /* Browser bug fix */
+ -webkit-transform: translateY(-100%); /* Browser bug fix */
+ transform: translateY(-100%);
+ }
+}
