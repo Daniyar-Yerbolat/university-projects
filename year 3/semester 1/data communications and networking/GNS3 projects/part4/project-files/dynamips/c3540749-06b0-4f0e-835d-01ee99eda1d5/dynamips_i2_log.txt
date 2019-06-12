@@ -1,0 +1,23 @@
+Mar 01 00:32:24.763 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Mar 01 00:32:24.764 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 49908.
+Mar 01 00:32:25.137 HYPERVISOR: exec_cmd: hypervisor version 
+Mar 01 00:32:25.138 HYPERVISOR: exec_cmd: hypervisor uuid 
+Mar 01 00:32:25.139 HYPERVISOR: exec_cmd: hypervisor working_dir C:/Users/daniel/GNS3/projects/juniper-test\project-files\dynamips 
+Mar 01 00:32:25.927 GENERAL: working_dir=C:/Users/daniel/GNS3/projects/juniper-test\project-files\dynamips
+Mar 01 00:32:25.972 HYPERVISOR: exec_cmd: ethsw create SW1 
+Mar 01 00:32:26.076 HYPERVISOR: exec_cmd: nio create_udp udp-db19448a-91ee-4e6d-a9bf-627d8dce5624 10000 127.0.0.1 10001 
+Mar 01 00:32:26.093 HYPERVISOR: exec_cmd: ethsw add_nio SW1 udp-db19448a-91ee-4e6d-a9bf-627d8dce5624 
+Mar 01 00:32:26.111 HYPERVISOR: exec_cmd: ethsw set_access_port SW1 udp-db19448a-91ee-4e6d-a9bf-627d8dce5624 1 
+Mar 01 00:32:28.851 HYPERVISOR: exec_cmd: nio create_udp udp-d184adc5-026d-43fb-8a49-a5b23c0f0ba1 10007 127.0.0.1 10006 
+Mar 01 00:32:28.869 HYPERVISOR: exec_cmd: ethsw add_nio SW1 udp-d184adc5-026d-43fb-8a49-a5b23c0f0ba1 
+Mar 01 00:32:28.886 HYPERVISOR: exec_cmd: ethsw set_access_port SW1 udp-d184adc5-026d-43fb-8a49-a5b23c0f0ba1 1 
+Mar 01 00:32:29.540 HYPERVISOR: exec_cmd: nio create_udp udp-c76ff1f4-1847-48d6-bbf1-504fbbea930b 10015 127.0.0.1 10014 
+Mar 01 00:32:29.548 HYPERVISOR: exec_cmd: ethsw add_nio SW1 udp-c76ff1f4-1847-48d6-bbf1-504fbbea930b 
+Mar 01 00:32:29.549 HYPERVISOR: exec_cmd: ethsw set_access_port SW1 udp-c76ff1f4-1847-48d6-bbf1-504fbbea930b 1 
+Mar 01 00:32:46.809 HYPERVISOR: exec_cmd: nio create_gen_eth generic_ethernet-66731cd1-6fb7-4a4b-a2a9-afc544022a28 \Device\NPF_{5A9C0CF8-D3DB-4996-AF50-02BC05C9888B} 
+Mar 01 00:32:46.896 HYPERVISOR: exec_cmd: ethsw add_nio SW1 generic_ethernet-66731cd1-6fb7-4a4b-a2a9-afc544022a28 
+Mar 01 00:32:46.909 HYPERVISOR: exec_cmd: ethsw set_access_port SW1 generic_ethernet-66731cd1-6fb7-4a4b-a2a9-afc544022a28 1 
+Mar 01 00:33:00.749 HYPERVISOR: exec_cmd: ethsw delete SW1 
+Mar 01 00:33:00.837 HYPERVISOR: exec_cmd: hypervisor stop 
+Mar 01 00:33:01.198 HYPERVISOR: Stopped.
+Mar 01 00:33:01.198 GENERAL: reset done.

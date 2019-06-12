@@ -1,0 +1,177 @@
+{
+    "auto_start": false,
+    "name": "lab2",
+    "project_id": "a2e9e394-adc5-40f2-944d-7fe41edcb8f2",
+    "revision": 8,
+    "topology": {
+        "computes": [
+            {
+                "compute_id": "local",
+                "host": "127.0.0.1",
+                "name": "Local",
+                "port": 8000,
+                "protocol": "http"
+            }
+        ],
+        "drawings": [
+            {
+                "drawing_id": "9b177dda-c40a-4dc0-93a7-fc93bdb75702",
+                "rotation": 0,
+                "svg": "<svg height=\"20\" width=\"140\"><text fill=\"#000000\" fill-opacity=\"0.0\" font-family=\"TypeWriter\" font-size=\"10\" font-weight=\"bold\" font-style=\"normal\">192.168.2.1/24</text></svg>",
+                "x": -251,
+                "y": -334,
+                "z": 0
+            },
+            {
+                "drawing_id": "fcf6ca6c-d4f0-4a6f-ac3e-c2afcf4f79e6",
+                "rotation": 0,
+                "svg": "<svg height=\"20\" width=\"160\"><text fill=\"#000000\" fill-opacity=\"0.0\" font-family=\"TypeWriter\" font-size=\"10\" font-weight=\"bold\" font-style=\"normal\">192.168.2.254/24</text></svg>",
+                "x": -80,
+                "y": -178,
+                "z": 0
+            },
+            {
+                "drawing_id": "4d9bdf73-9c93-4264-8e55-5b2d33166523",
+                "rotation": 0,
+                "svg": "<svg height=\"20\" width=\"160\"><text fill=\"#000000\" fill-opacity=\"0.0\" font-family=\"TypeWriter\" font-size=\"10\" font-weight=\"bold\" font-style=\"normal\">192.168.1.254/24</text></svg>",
+                "x": -78,
+                "y": -99,
+                "z": 0
+            },
+            {
+                "drawing_id": "a08fb405-01ba-441d-ad77-60e1d8b5983b",
+                "rotation": 0,
+                "svg": "<svg height=\"20\" width=\"140\"><text fill=\"#000000\" fill-opacity=\"0.0\" font-family=\"TypeWriter\" font-size=\"10\" font-weight=\"bold\" font-style=\"normal\">192.168.1.1/24</text></svg>",
+                "x": -61,
+                "y": 27,
+                "z": 0
+            }
+        ],
+        "links": [
+            {
+                "link_id": "b36588ab-6216-4c65-8c3b-e00049c7bc39",
+                "nodes": [
+                    {
+                        "adapter_number": 0,
+                        "node_id": "d12df934-b3b2-424e-881f-05a6a26ed12b",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 0,
+                        "node_id": "2f5e56b2-083b-4a41-a9ed-87cb09b0e11e",
+                        "port_number": 0
+                    }
+                ]
+            },
+            {
+                "link_id": "7bb73559-3f21-4f38-af7c-fef8dfa460f0",
+                "nodes": [
+                    {
+                        "adapter_number": 0,
+                        "node_id": "7e5675dc-41f6-46e5-9e27-35fbb61788c7",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 0,
+                        "node_id": "d12df934-b3b2-424e-881f-05a6a26ed12b",
+                        "port_number": 1
+                    }
+                ]
+            }
+        ],
+        "nodes": [
+            {
+                "compute_id": "local",
+                "console": 2001,
+                "console_type": "telnet",
+                "first_port_name": null,
+                "label": {
+                    "rotation": 0,
+                    "style": "font-family: TypeWriter;font-size: 10;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                    "text": "PC1",
+                    "x": 13,
+                    "y": -25
+                },
+                "name": "PC1",
+                "node_id": "2f5e56b2-083b-4a41-a9ed-87cb09b0e11e",
+                "node_type": "vpcs",
+                "port_name_format": "Ethernet{0}",
+                "port_segment_size": 0,
+                "properties": {},
+                "symbol": null,
+                "x": -127,
+                "y": -343,
+                "z": 1
+            },
+            {
+                "compute_id": "local",
+                "console": 2002,
+                "console_type": "telnet",
+                "first_port_name": null,
+                "label": {
+                    "rotation": 0,
+                    "style": "font-family: TypeWriter;font-size: 10;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                    "text": "PC2",
+                    "x": 13,
+                    "y": -25
+                },
+                "name": "PC2",
+                "node_id": "7e5675dc-41f6-46e5-9e27-35fbb61788c7",
+                "node_type": "vpcs",
+                "port_name_format": "Ethernet{0}",
+                "port_segment_size": 0,
+                "properties": {},
+                "symbol": null,
+                "x": -137,
+                "y": 29,
+                "z": 1
+            },
+            {
+                "compute_id": "local",
+                "console": 2003,
+                "console_type": "telnet",
+                "first_port_name": null,
+                "label": {
+                    "rotation": 0,
+                    "style": "font-family: TypeWriter;font-size: 10;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                    "text": "R1",
+                    "x": 18,
+                    "y": -25
+                },
+                "name": "R1",
+                "node_id": "d12df934-b3b2-424e-881f-05a6a26ed12b",
+                "node_type": "dynamips",
+                "port_name_format": "Ethernet{0}",
+                "port_segment_size": 0,
+                "properties": {
+                    "auto_delete_disks": true,
+                    "clock_divisor": 8,
+                    "disk0": 0,
+                    "disk1": 0,
+                    "dynamips_id": 1,
+                    "exec_area": 64,
+                    "idlemax": 500,
+                    "idlepc": "0x60a48cb8",
+                    "idlesleep": 30,
+                    "image": "C:/Users/daniel/GNS3/images/IOS/c2691-adventerprisek9-mz.124-25d.image",
+                    "iomem": 5,
+                    "mac_addr": "c001.0de0.0000",
+                    "mmap": true,
+                    "nvram": 256,
+                    "platform": "c2691",
+                    "ram": 192,
+                    "slot0": "GT96100-FE",
+                    "slot1": "NM-4T",
+                    "sparsemem": true,
+                    "system_id": "FTX0945W0MY"
+                },
+                "symbol": ":/symbols/router.svg",
+                "x": -134,
+                "y": -154,
+                "z": 1
+            }
+        ]
+    },
+    "type": "topology",
+    "version": "2.1.0"
+}

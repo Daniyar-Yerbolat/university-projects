@@ -1,0 +1,7 @@
+Download the cisco ISO, and add it into GNS3
+https://drive.google.com/open?id=1c3AXVU9pyu5yRpeApSP7SPWO_0H8SEY2
+
+Download the Juniper iso and put it into virtual box
+https://drive.google.com/open?id=10DdYusQL7kKPpTqY72m-mhYa-M9llmCg
+
+Add a dummy ubuntu slot into virtual box to make part 4 load or add ubuntu itself (all elements required to be present in order for the topology to load, but are not checked whether they are functional)
